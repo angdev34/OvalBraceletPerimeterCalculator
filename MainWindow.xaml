@@ -49,13 +49,9 @@
              VerticalAlignment="Top" FontSize="11" Background="Transparent" Foreground="DarkSlateGray"
              FontWeight="Normal"/>
                 
-
                 <Button Click="CalcBtnClick" Content="Calculate" HorizontalAlignment="Left" Margin="190,192,0,0"
              VerticalAlignment="Top" Foreground="DarkSlateGray" FontWeight= "Medium" FontSize="10"
               Width="82" Height="30"  />
-
-
-
 
                 <Label Content="Perimeter Result" HorizontalAlignment="Left" Margin="80,245,0,0" VerticalAlignment="Top"
              FontSize="11" Background="Transparent" Foreground="DarkSlateGray" FontWeight= "Medium" />
