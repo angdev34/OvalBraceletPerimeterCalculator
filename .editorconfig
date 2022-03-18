@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# SYSLIB0014: Tür veya üye artık kullanılmıyor
+dotnet_diagnostic.SYSLIB0014.severity = none
