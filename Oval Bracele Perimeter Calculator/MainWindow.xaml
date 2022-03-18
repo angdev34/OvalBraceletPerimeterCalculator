@@ -1,0 +1,75 @@
+﻿<Window x:Class="OvalBracelePerimeterCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OvalBracelePerimeterCalculator"
+        mc:Ignorable="d"
+        Title="Calculator" Height="350" Width="300">
+    <Grid>
+
+        <Grid Background="#CBC3E3">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="305*"/>
+                    <RowDefinition Height="30*"/>
+                </Grid.RowDefinitions>
+
+                <TextBox   Width="176"  VerticalAlignment="Top" HorizontalAlignment="Right" x:Name="UserInput" Margin="0,80,10,0" Height="20"/>
+                <TextBlock IsHitTestVisible="False" Text="Enter a number between 1 and 5." VerticalAlignment="Top" FontSize="10" HorizontalAlignment="Right" Margin="0,83,28,0" Foreground="DarkGray">
+                    <TextBlock.Style>
+                        <Style TargetType="{x:Type TextBlock}">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Text, ElementName=UserInput}" Value="">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+
+                <Label Content="Bracelet Size" HorizontalAlignment="Left" Margin="21,78,0,0" VerticalAlignment="Top"
+                 FontSize="11" Background="Transparent" Foreground="DarkSlateGray" FontWeight= "Medium"  Height="22" Width="79"/>
+
+                <Button Click="UserInputClick" Content="Send To Server" Foreground="DarkSlateGray" FontWeight= "Medium" FontSize="10" HorizontalAlignment="Left" Margin="189,117,0,0"
+              Width="83" Height="20" VerticalAlignment="Top" RenderTransformOrigin="0.799,-0.009"/>
+
+                <Label Content="Small Diameter" HorizontalAlignment="Left" Margin="23,180,0,0" VerticalAlignment="Top"  
+             FontSize="11" Background="Transparent" Foreground="DarkSlateGray" FontWeight= "Medium"   />
+
+                <Label Content="Big Diameter" HorizontalAlignment="Left" Margin="29,207,0,0" VerticalAlignment="Top"  
+             FontSize="11" Background="Transparent" Foreground="DarkSlateGray" FontWeight= "Medium"   />
+
+                <Label x:Name="GetSmallDiameter" Content="0.0" HorizontalAlignment="Left" Margin="114,180,0,0"
+             VerticalAlignment="Top" FontSize="11" Background="Transparent" Foreground="DarkSlateGray"
+             FontWeight="Normal"/>
+                
+                <Label x:Name="GetBigDiameter" Content="0.0" HorizontalAlignment="Left" Margin="114,207,0,0"
+             VerticalAlignment="Top" FontSize="11" Background="Transparent" Foreground="DarkSlateGray"
+             FontWeight="Normal"/>
+                
+
+                <Button Click="CalcBtnClick" Content="Calculate" HorizontalAlignment="Left" Margin="190,192,0,0"
+             VerticalAlignment="Top" Foreground="DarkSlateGray" FontWeight= "Medium" FontSize="10"
+              Width="82" Height="30"  />
+
+
+
+
+                <Label Content="Perimeter Result" HorizontalAlignment="Left" Margin="80,245,0,0" VerticalAlignment="Top"
+             FontSize="11" Background="Transparent" Foreground="DarkSlateGray" FontWeight= "Medium" />
+
+                <Label x:Name="GetResult" Content="0.0" HorizontalAlignment="Left" Margin="175,245,0,0"
+             VerticalAlignment="Top" FontSize="11" Background="Transparent" Foreground="DarkSlateGray"
+             RenderTransformOrigin="0.48,0.546" FontWeight="Normal"/>
+
+            </Grid>
+
+        </Grid>
+        <Label Content="Oval Bracelet Perimeter Calculator" Margin="0,25,0,0" FontSize="15" FontWeight= "Medium"
+           VerticalAlignment="Top" HorizontalAlignment="Center" />
+
+    </Grid>
+</Window>
