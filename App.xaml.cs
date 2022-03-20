@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Oval_Bracele_Perimeter_Calculator
+namespace Oval_Bracelet_Perimeter_Calculator
 {
     /// <summary>
     /// Interaction logic for App.xaml
